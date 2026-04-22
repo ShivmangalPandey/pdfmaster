@@ -9,12 +9,12 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "@vitejs/plugin-react": "^4.7.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },
   "devDependencies": {
     "@tailwindcss/vite": "^4.0.0",
+    "@vitejs/plugin-react": "^4.7.0",
     "autoprefixer": "^10.0.0",
     "postcss": "^8.0.0",
     "tailwindcss": "^4.0.0",
