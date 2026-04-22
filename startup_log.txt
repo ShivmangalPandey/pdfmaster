@@ -1,0 +1,27 @@
+◇ injected env (0) from .env // tip: ⌘ suppress logs { quiet: true }
+🛠️ Initializing Vite Development Middleware...
+✅ Vite Middleware initialized
+🚀 PDFMaster Server is fully operational!
+📡 Listening on: http://0.0.0.0:3000
+🛠️ Mode: development
+✘ [ERROR] Top-level await is not available in the configured target environment ("chrome87", "edge88", "es2020", "firefox78", "safari14" + 2 overrides)
+
+    node_modules/pdfjs-dist/build/pdf.mjs:16837:53:
+      16837 │ ...ck_exports__ = globalThis.pdfjsLib = await __webpack_exports__;
+            ╵                                         ~~~~~
+
+/app/applet/node_modules/vite/node_modules/esbuild/lib/main.js:1467
+  let error = new Error(text);
+              ^
+
+Error: Build failed with 1 error:
+node_modules/pdfjs-dist/build/pdf.mjs:16837:53: ERROR: Top-level await is not available in the configured target environment ("chrome87", "edge88", "es2020", "firefox78", "safari14" + 2 overrides)
+    at failureErrorWithLog (/app/applet/node_modules/vite/node_modules/esbuild/lib/main.js:1467:15)
+    at /app/applet/node_modules/vite/node_modules/esbuild/lib/main.js:926:25
+    at /app/applet/node_modules/vite/node_modules/esbuild/lib/main.js:1345:9
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5) {
+  errors: [Getter/Setter],
+  warnings: [Getter/Setter]
+}
+
+Node.js v22.22.2
