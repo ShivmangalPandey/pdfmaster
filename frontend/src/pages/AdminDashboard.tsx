@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import { Navbar } from '../components/Navigation';
 import { BlogPost } from '../types/blog';
 import { Plus, Edit2, Trash2, ExternalLink, LayoutDashboard, FileText, Image, Search, X, Check, Save } from 'lucide-react';
-import { motion } from 'motion/react';
+import { motion } from   'framer-motion';
 
 export default function AdminDashboard() {
   const [blogs, setBlogs] = useState<BlogPost[]>([]);

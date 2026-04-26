@@ -3,7 +3,7 @@ import { useParams, Link } from 'react-router-dom';
 import { TOOLS } from '../constants';
 import { Navbar, Footer } from '../components/Navigation';
 import { Upload, File, X, Download, Loader2, CheckCircle2, AlertCircle, ArrowRight } from 'lucide-react';
-import { motion, AnimatePresence } from 'motion/react';
+import { motion, AnimatePresence } from 'framer-motion';
 import { cn, formatBytes } from '../lib/utils';
 import { FileInfo } from '../types';
 import * as pdfjs from 'pdfjs-dist';

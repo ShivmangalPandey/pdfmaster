@@ -2,7 +2,7 @@ import React from 'react';
 import * as LucideIcons from 'lucide-react';
 import { ToolCard } from '../components/ToolCard';
 import { TOOLS } from '../constants';
-import { motion } from 'motion/react';
+import { motion } from 'framer-motion';
 import { FileText, Zap, Shield, MousePointer2, CheckCircle2, Star } from 'lucide-react';
 import { SEO } from '../components/SEO';
 

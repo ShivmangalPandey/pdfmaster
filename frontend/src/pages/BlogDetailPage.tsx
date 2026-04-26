@@ -3,9 +3,9 @@ import { useParams, Link } from 'react-router-dom';
 import { Navbar, Footer } from '../components/Navigation';
 import { BlogPost } from '../types/blog';
 import { format } from 'date-fns';
-import { Clock, User, ArrowLeft, Share2, Facebook, Twitter, Linkedin, Copy, Check } from 'lucide-react';
+import { Clock, User, ArrowLeft, Share2, X,  Copy, Check } from 'lucide-react';
 import ReactMarkdown from 'react-markdown';
-import { motion, AnimatePresence } from 'motion/react';
+import { motion, AnimatePresence } from  'framer-motion';
 import { SEO } from '../components/SEO';
 
 export default function BlogDetailPage() {
@@ -136,9 +136,9 @@ export default function BlogDetailPage() {
             <div className="mt-16 pt-10 border-t border-zinc-100 flex items-center justify-between">
               <span className="text-sm font-bold text-zinc-400 uppercase tracking-widest">Share this story</span>
               <div className="flex gap-4">
-                <button onClick={() => handleShare('twitter')} className="p-3 bg-zinc-50 rounded-xl text-zinc-400 hover:text-brand transition-all"><Twitter size={20}/></button>
-                <button onClick={() => handleShare('facebook')} className="p-3 bg-zinc-50 rounded-xl text-zinc-400 hover:text-brand transition-all"><Facebook size={20}/></button>
-                <button onClick={() => handleShare('linkedin')} className="p-3 bg-zinc-50 rounded-xl text-zinc-400 hover:text-brand transition-all"><Linkedin size={20}/></button>
+                <button onClick={() => handleShare('twitter')} className="p-3 bg-zinc-50 rounded-xl text-zinc-400 hover:text-brand transition-all"><X size={20}/></button>
+              
+                
                 <button onClick={() => handleShare('copy')} className="p-3 bg-zinc-50 rounded-xl text-zinc-400 hover:text-brand transition-all relative">
                    {copied ? <Check size={20} className="text-green-500" /> : <Copy size={20} />}
                 </button>

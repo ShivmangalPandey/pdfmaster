@@ -4,7 +4,7 @@ import { Navbar, Footer } from '../components/Navigation';
 import { BlogPost } from '../types/blog';
 import { format } from 'date-fns';
 import { Clock, Tag, ChevronRight, Search } from 'lucide-react';
-import { motion } from 'motion/react';
+import { motion } from 'framer-motion';
 import { SEO } from '../components/SEO';
 
 export default function BlogListingPage() {

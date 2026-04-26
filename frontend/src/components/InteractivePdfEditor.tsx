@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState, useCallback } from 'react';
 import * as pdfjs from 'pdfjs-dist';
-import { motion, AnimatePresence } from 'motion/react';
+import { motion, AnimatePresence } from 'framer-motion';
 import { 
   Type, 
   Trash2, 
@@ -84,7 +84,7 @@ export const InteractivePdfEditor: React.FC<InteractivePdfEditorProps> = ({ file
     canvas.height = viewport.height;
     canvas.width = viewport.width;
     
-    const renderContext = {
+    const renderContext : any= {
       canvasContext: context,
       viewport: viewport,
     };
