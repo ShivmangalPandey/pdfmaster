@@ -9,6 +9,7 @@ import { FileInfo } from '../types';
 import * as pdfjs from 'pdfjs-dist';
 import { SEO } from '../components/SEO';
 import { TOOL_SEO_CONTENT } from '../toolContent';
+const API_URL = import.meta.env.VITE_API_URL || "https://pdfmaster-a85t.onrender.com";
 
 import { InteractivePdfEditor, PdfAnnotation } from '../components/InteractivePdfEditor';
 
@@ -162,10 +163,10 @@ export default function ToolPage() {
       });
 
       console.log(`📤 Sending ${files.length} files to /api/upload...`);
-      const uploadRes = await fetch('/api/upload', {
-        method: 'POST',
-        body: formData,
-      });
+      const uploadRes = await fetch(`${API_URL}/api/upload`, {
+  method: 'POST',
+  body: formData,
+});
 
       const uploadData = await safeParseJson(uploadRes);
 
@@ -187,16 +188,14 @@ export default function ToolPage() {
       // 2. Process based on tool
       setStatus('processing');
       console.log(`⚙️ Processing tool: ${tool.id}`);
-      const processRes = await fetch(`/api/tools/${tool.id}`, {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ 
-          fileIds: uploadedFiles.map((f: any) => f.id),
-          text: tool.id === 'edit' ? options.editText : options.watermarkText,
-          level: options.compressionLevel,
-          annotations: tool.id === 'edit' ? activeAnnotations : undefined,
-        }),
-      });
+      const processRes = await fetch(`${API_URL}/api/tools/${tool.id}`, {
+     method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+       body: JSON.stringify({
+       fileIds: uploadedFiles.map((f: any) => f.id),
+       text: tool.id === 'edit' ? options.editText : options.watermarkText,
+         }),
+});
 
       const processData = await safeParseJson(processRes);
 
